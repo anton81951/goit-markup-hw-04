@@ -337,8 +337,11 @@ img {
 
 /* backgrounds */
 .style-first-section {
-    background-color:  #2E2F42;
+    background:  #2E2F42 url(./images/office_laptops.jpg);
     padding: 188px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .background-third-section {
     background-color: #F4F4FD;
