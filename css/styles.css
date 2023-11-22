@@ -233,7 +233,7 @@ img {
 
 .box-icon-values {
     display: flex;
-    align-content: center ;
+    align-items: center ;
     justify-content: center;
     background: #F4F4FD; 
     border-radius: 4px; 
@@ -242,12 +242,10 @@ img {
     height: 112px;
 }
 
-.icon-values {
+.box-icon-values svg {
     width: 64px;
     height: 64px;
-    margin: 24px 0;
 }
-
 /* boxes for the third section our team */
 
 .box-third-section {
@@ -266,7 +264,9 @@ img {
 
 .team-member-item {
     background-color: white;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08); 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 2px 1px rgba(46, 47, 66, 0.08);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
 }
@@ -314,11 +314,18 @@ img {
     background-color: #404bbf;
 }
 
+.team-socials-icon:hover,
+.team-socials-icon:focus {
+    background-color: #404bbf;
+}
+
 .icon-media {
+    fill: #f4f4fd;
+}
+
+.team-socials-icon svg {
     width: 16px;
     height: 16px;
-    fill: #f4f4fd;
-
 }
 
 .team-member-description .header-in-section {
