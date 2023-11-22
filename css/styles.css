@@ -49,7 +49,11 @@ img {
 /* boxes for header */
 
 .top-header {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+    margin: 0 auto;
 }
 
 .top-header .container {
@@ -90,14 +94,22 @@ img {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current-page:after {
-    content: "";
-    width: 48px;
-    height: 4px;
-    background-color: #404BBF;
-    border-radius: 2px;
+.menu-item {
+    position: relative;
+}
+
+.menu-item:first-child .text-in-menu {
+    color: #404bbf;
+}
+
+.menu-item:first-child .text-in-menu::after {
+    content: '';
     position: absolute;
-    bottom: 0;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 
@@ -175,6 +187,25 @@ img {
     padding: 120px 0;
 }
 
+.style-first-section {
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)), 
+        url(../images/office_laptops.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1440px;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.style-first-section .container {
+    padding: 188px 0;
+    
+}
+
 .style-first-section .container {
     display: flex;
     flex-direction: column;
@@ -208,6 +239,7 @@ img {
     border-radius: 4px; 
     border: 1px #8E8F99 solid;
     margin-bottom: 8px;
+    height: 112px;
 }
 
 .icon-values {
@@ -239,15 +271,6 @@ img {
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-member-item .team-socails-back {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-member-item:hover .team-socails-back,
-.team-member-item:focus .team-socails-back {
-    background-color: #404BBF;
-}
-
 .team-member-description {
     padding: 32px 0;
 }
@@ -258,7 +281,9 @@ img {
 
 .team-member-socials {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 24px;
+
 }
 
 .team-socails-back {
@@ -267,13 +292,32 @@ img {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #4D5AE5;
-    border-radius: 50%;
 }
 
 .team-socials-icon {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-item .team-socials-icon {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-item:hover .team-socials-icon,
+.team-member-item:focus .team-socials-icon {
+    background-color: #404bbf;
+}
+
+.icon-media {
     width: 16px;
-    fill: #F4F4FD;
+    height: 16px;
+    fill: #f4f4fd;
 
 }
 
@@ -491,21 +535,6 @@ img {
 }
 
 /* backgrounds */
-.style-first-section {
-    background-color: #2E2F42;
-}
-
-.style-first-section .container {
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(46, 47, 66, 0.7), 
-        rgba(46, 47, 66, 0.7)), 
-        url(../images/office_laptops.jpg);
-    padding: 188px 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
 .background-third-section {
     background-color: #F4F4FD;
