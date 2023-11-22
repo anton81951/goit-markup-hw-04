@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -71,14 +77,33 @@ img {
 
 .text-in-menu {
     color: #2e2f42;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
     position: relative;
+    transition: color 50ms linear;
 }
+
+.text-in-menu::after {
+    transition: background-color 500ms linear;
+}
+
+.menu:hover .text-in-menu:after {
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
 
 .contact {
     display: flex;
@@ -123,6 +148,7 @@ img {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 50ms linear;
 }
 
 .text-for-contact:hover,
@@ -217,6 +243,14 @@ img {
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-member-item .team-socails-back {
+    transition: background-color 50ms linear;
+}
+
+.team-member-item:hover .team-socails-back {
+    background-color: #404BBF;
+}
+
 .team-member-description {
     padding: 32px 0;
 }
@@ -280,6 +314,40 @@ img {
     width: calc((100% - 48px) / 3);
 }
 
+.card-list-image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-list-image-overlay {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.card-list-image-overlay p {
+    color: #F4F4FD;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    word-wrap: break-word;
+    padding-left: 32px;
+    padding-top: 40px;
+}
+
+.card-list-image-box:hover .card-list-image-overlay {
+    transform: translatey(0);
+}
+
 .card-text {
     border: 1px #E7E9FC solid;
     border-top: none;
@@ -315,9 +383,22 @@ img {
     gap: 16px;
 }
 
+.footer-social-media-line .team-socails-back {
+    transition: background-color 50ms linear;
+}
+
+.footer-social-media-line .team-socails-back:hover {
+    background-color: #31D0AA;
+}
+
 .bottom-logo {
     display: inline-block;
     margin-bottom: 16px;
+}
+
+.footer-icons-style .team-socials-icon {
+    fill: #F4F4FD;
+    width: 24px;
 }
 
 /* different texts in sections */
@@ -392,6 +473,7 @@ img {
     border: none;
     background-color: #4d5ae5;
     border-radius: 4px;
+    transition: background-color 50ms linear;
 }
 
 .button-fororder:hover,
