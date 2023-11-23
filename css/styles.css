@@ -242,10 +242,6 @@ img {
     height: 112px;
 }
 
-.box-icon-values svg {
-    width: 64px;
-    height: 64px;
-}
 /* boxes for the third section our team */
 
 .box-third-section {
@@ -321,11 +317,6 @@ img {
 
 .icon-media {
     fill: #f4f4fd;
-}
-
-.team-socials-icon svg {
-    width: 16px;
-    height: 16px;
 }
 
 .team-member-description .header-in-section {
@@ -451,8 +442,6 @@ img {
 
 .footer-icon-color {
     fill:#f4f4fd;
-    width: 24px;
-    height: 24px;
 }
 
 .footer-icon-link:hover, 
