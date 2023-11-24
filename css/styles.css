@@ -112,6 +112,15 @@ img {
     border-radius: 2px;
 }
 
+.menu-item:first-child .text-in-menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
 
 .contact {
     display: flex;
