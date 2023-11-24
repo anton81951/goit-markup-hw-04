@@ -120,6 +120,7 @@ img {
     height: 4px;
     background-color: #404bbf;
     border-radius: 2px;
+    width: 100%;
 }
 
 .contact {
@@ -232,7 +233,6 @@ img {
 .list-of-values {
     display: flex;
     gap: 24px;
-    padding: 120px 0;
 }
 
 .values-item { 
@@ -411,12 +411,6 @@ img {
 .footer-first-box {
     display: block;
     margin-right: 120px;
-}
-
-.footer-social-media {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
 
 .footer-social-media-sign {
