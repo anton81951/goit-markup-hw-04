@@ -391,7 +391,7 @@ img {
 
 
 
-.card-list-image-box:hover .card-list-image-overlay {
+.card-list-item:hover .card-list-image-overlay {
     transform: translatey(0);
 }
 
